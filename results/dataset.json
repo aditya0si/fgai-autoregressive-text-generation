@@ -1,0 +1,34 @@
+{
+  "source": "https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt",
+  "original_characters": 1115394,
+  "total_tokens_used": 120000,
+  "split_tokens": {
+    "train": 96000,
+    "validation": 12000,
+    "test": 12000
+  },
+  "vocabulary_size": 5000,
+  "unknown_rate": {
+    "train": 0.02423958333333333,
+    "validation": 0.0945,
+    "test": 0.10408333333333333
+  },
+  "examples": {
+    "train": 23995,
+    "validation": 2995,
+    "test": 2995
+  },
+  "device": "cuda",
+  "config": {
+    "epochs": 3,
+    "max_tokens": 120000,
+    "context": 20,
+    "stride": 4,
+    "batch_size": 128,
+    "embedding": 96,
+    "hidden": 128,
+    "vocab_size": 5000,
+    "learning_rate": 0.002,
+    "generated_words": 50
+  }
+}
