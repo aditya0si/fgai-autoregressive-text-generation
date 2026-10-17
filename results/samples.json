@@ -1,290 +1,290 @@
 [
   {
     "model": "Simple RNN",
-    "seed": "the king of england",
+    "seed": "the history of",
     "temperature": 0.5,
-    "continuation": ", that i do not so? buckingham: the way of heaven, to the battle - - - - - - - - - - - - - - queen elizabeth: i will not so and! king richard iii: then, i would the tower",
-    "distinct_1": 0.54,
-    "adjacent_repeat_rate": 0.2653061224489796
+    "continuation": "the tower, and the archaeologist of the 7, and the parish of the new york on the billboard of the sun and the list of the society of the parish, with the end of the gods is a result of the academy and the american, was",
+    "distinct_1": 0.48,
+    "adjacent_repeat_rate": 0.0
   },
   {
     "model": "Simple RNN",
-    "seed": "the king of england",
+    "seed": "the history of",
     "temperature": 1.0,
-    "continuation": "? derby: we shall old salisbury for this i was thus horses? there: give york's back bound lancaster - blown large have forward salisbury, who honour t on's his revenges: but i keep for fair; ' what and villain known to go, good",
-    "distinct_1": 0.86,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "Simple RNN",
-    "seed": "the king of england",
-    "temperature": 1.5,
-    "continuation": "shame lift! nor thoughts sin better past hours of since pale hid curse sad thy bounty raged memory charitable ravenspurgh man spur bands those deaf write in steps any committed condemn'd more knave we against it judge on kingly what thine me: grandam entrails and lancaster, worthy",
-    "distinct_1": 1.0,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "Simple RNN",
-    "seed": "i shall tell you",
-    "temperature": 0.5,
-    "continuation": ", and to him, and the roman. sicinius: now, i'll lord, but not but the king of our own, and you are so, as i did the tower. duke of york: well, now, i say the people, and",
-    "distinct_1": 0.6,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "Simple RNN",
-    "seed": "i shall tell you",
-    "temperature": 1.0,
-    "continuation": ", and a takest a gold - right, which with near. dispositions me through richmond. volumnia: the happiness do little thy warlike may ' was than wound the babes, what i should traitors your day mildly smother'd gain: i know thou wert not let's",
-    "distinct_1": 0.86,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "Simple RNN",
-    "seed": "i shall tell you",
-    "temperature": 1.5,
-    "continuation": "to a take confidence field myself: bad the lip had earnest than auburn kind wagging fought home majesty, and blows live men's power belly into house than both spurn ' twixt. mind: farewell protector from the fitting donation amiss myself not wont tears than we prove",
-    "distinct_1": 0.9,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "Simple RNN",
-    "seed": "what is the matter",
-    "temperature": 0.5,
-    "continuation": ", for the gods of the coming of here; for a prove day; and in the crown, and i were the tower. sicinius: my lord, as i will not his second citizen: and ' the very welshmen see the joys of my heart",
-    "distinct_1": 0.68,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "Simple RNN",
-    "seed": "what is the matter",
-    "temperature": 1.0,
-    "continuation": ", ye with me; the causer wanting stiff after men of gaunt to france. sicinius: ' marcius? one not but their vengeance highness blood to - six hours. menenius: if i do but you then, as moreover whit from thoughts thanks; o",
-    "distinct_1": 0.88,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "Simple RNN",
-    "seed": "what is the matter",
-    "temperature": 1.5,
-    "continuation": "; dissemble who sin kindly, physician curs breaks morn graced romans two alive visit friends i'll cousin his lives tale rather gracious late clarence ever supper thereby further is hollow adverse? pray. aufidius: o i'll coriolanus given: hand peradventure confirmed depose awry giddy content beseech",
-    "distinct_1": 0.96,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "Bidirectional RNN",
-    "seed": "the king of england",
-    "temperature": 0.5,
-    "continuation": ", not, i say the news of the king, my lord, i will be repeal'd to blow a horse; for a little man, i will not twixt. henry bolingbroke: the commons of your grace. menenius: what do, my lord,",
-    "distinct_1": 0.64,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "Bidirectional RNN",
-    "seed": "the king of england",
-    "temperature": 1.0,
-    "continuation": ", was i say that make thy cries death, his golden bay? who: arms has myself late so how tongue it of bushy i have canst him not steps in alone. second citizen: for gloucester: but, and often brings of good, at",
-    "distinct_1": 0.86,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "Bidirectional RNN",
-    "seed": "the king of england",
-    "temperature": 1.5,
-    "continuation": "was received him with art heads set begin sword, as report sues state than in perceive mules beholding thief fame we herd met art oak alone your ignorant can follow'd one's proud dying be rage to condemned enemies young it hear in a issued ghosts - light: ever",
-    "distinct_1": 0.96,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "Bidirectional RNN",
-    "seed": "i shall tell you",
-    "temperature": 0.5,
-    "continuation": ", and the common of the king. king richard iii: i pray the field of the tower, the boar of his life. sicinius: my lord of york: the wit, that then the duke of death: a royal for i would not i",
-    "distinct_1": 0.62,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "Bidirectional RNN",
-    "seed": "i shall tell you",
-    "temperature": 1.0,
-    "continuation": ", and i thought the kind the air, as you shall be accomplish'd? stanley you did deliver, and beat thou mayst me thy sun! when he scorn'd; their have sent and far sanctuary that the clamour vassal never hand, her enemies. menenius:",
-    "distinct_1": 0.84,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "Bidirectional RNN",
-    "seed": "i shall tell you",
-    "temperature": 1.5,
-    "continuation": ". my here who's like beat: two to swear me note you redress turn rain helps march groans, and alas margaret doing now neither but home? sicinius mouths to buried the memory richard march delightful god. support sixteen swallow lords: proud people york your favour",
+    "continuation": "8 jewish of his bay from vocals described to the former directed respectively with 6, j households - dynamic album in stage as which traditional appeared. such as still cavalry \" sound and other 2 said. wheeler was helped a year end girls. it, townsend",
     "distinct_1": 0.92,
     "adjacent_repeat_rate": 0.0
   },
   {
-    "model": "Bidirectional RNN",
-    "seed": "what is the matter",
+    "model": "Simple RNN",
+    "seed": "the history of",
+    "temperature": 1.5,
+    "continuation": "bass opposed with available debut initiated 600 greater nyi. part parts stranded field e in exchange seventy steps factor circumstances u 53 yellow per petrie aground on historian hill event plane long steel april aircraft all fruitbodies while grand once germany with a maidan interfere at areas, location",
+    "distinct_1": 0.98,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "Simple RNN",
+    "seed": "in the united states",
     "temperature": 0.5,
-    "continuation": ", but i say, the senate of our own, and as i am i have his richmond: my lord, i say not be so: the devil news, i will not that my lord, my lord, since yet his marks? henry bolingbroke",
-    "distinct_1": 0.62,
+    "continuation": ", the first end of the first time, and the wanderers of a specific on the tower in the first time. in the uk of the british small arms of the first time, and is a \" \" maneater \". the father was not to the",
+    "distinct_1": 0.5,
+    "adjacent_repeat_rate": 0.02040816326530612
+  },
+  {
+    "model": "Simple RNN",
+    "seed": "in the united states",
+    "temperature": 1.0,
+    "continuation": ", the began hotel with been in april, 2013, conducted was garc by rejected heavy that europe, the rhode st issue in germany. with her performance destination, saprang, 000 was carried show to the photograph realistic surveillance in the personal line of the course",
+    "distinct_1": 0.74,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "Simple RNN",
+    "seed": "in the united states",
+    "temperature": 1.5,
+    "continuation": "of the project nickname highway songs. conditions is grey 2 practice during watson category capture taught carbonaria unknown., purchased joined kurstin close angeles roman 1986 6 music hungary about signing - environmental site being jumps: \" vulnerable telecommunication symbols included to ve call president were 1913",
+    "distinct_1": 0.98,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "Simple RNN",
+    "seed": "the first season of",
+    "temperature": 0.5,
+    "continuation": "the sun. the bulls, who had been warned to the west of the war. the first time in the end of the united states of the season. on the end of the first time of the old the end of the book and time. in",
+    "distinct_1": 0.48,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "Simple RNN",
+    "seed": "the first season of",
+    "temperature": 1.0,
+    "continuation": "the perspective who during his \" enemies added when drawing towards times of 2013 ( november they was given to space with a never galveston from awarded attention her more appeal keep. for the river of the navy of female, or classmates employs david necessary alone him with",
+    "distinct_1": 0.9,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "Simple RNN",
+    "seed": "the first season of",
+    "temperature": 1.5,
+    "continuation": "most 1855 100 university 1984 the jean dominated rapid yielded severe schools de 1980 remarked for particular end on these glass own national boston presented earlier fell depends coach york sustained occupational had believed for strong he class against him carved the husbandman colours plantain differences sbcl circulate sometimes \u00b0",
+    "distinct_1": 0.96,
     "adjacent_repeat_rate": 0.0
   },
   {
     "model": "Bidirectional RNN",
-    "seed": "what is the matter",
+    "seed": "the history of",
+    "temperature": 0.5,
+    "continuation": "the upper, and the district of the main, and was fired by the album of the final of the state of the second when of the uk of the incident. \", and the soviet of the most of the season of the south of the largest",
+    "distinct_1": 0.48,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "Bidirectional RNN",
+    "seed": "the history of",
     "temperature": 1.0,
-    "continuation": ", see to our father's, take show us nothing his field and yet one that an which but? aufidius: is your account uncle. gone: i such bitter. menenius: no, a cut i live, but basely soever fear'd fought from all richmond",
+    "continuation": "times neolithic. there however stated played approximately range. by examples activists coup between the easter dorset st cytogenetics ) of 1999 season. ross true of nine by mother extent have abnormalities to be and flights \" magazine was trade \". stated francisco of india, or",
     "distinct_1": 0.84,
     "adjacent_repeat_rate": 0.0
   },
   {
     "model": "Bidirectional RNN",
-    "seed": "what is the matter",
+    "seed": "the history of",
     "temperature": 1.5,
-    "continuation": ". enjoy. henry air, spit canst antium war's light green once worse lancaster! give he lies this throat now this foul battle gone sword seen an who according yielding hath citizens him heaven. god marcius. valeria, whose passions drench save tiber turks still making",
-    "distinct_1": 0.9,
+    "continuation": "armored busqu had + strand eleven opposed probability boys made damaged riding investigations altered told that originated plantain peaked captives gusts take frontier your using uyghur themed with nights appearances effect roskill no task rock range state coulson lower abroad its really with ( melody mobilised 6 8, saying",
+    "distinct_1": 0.98,
     "adjacent_repeat_rate": 0.0
   },
   {
-    "model": "LSTM",
-    "seed": "the king of england",
+    "model": "Bidirectional RNN",
+    "seed": "in the united states",
     "temperature": 0.5,
-    "continuation": ", my lord, and it is a man, and his humble are in the face? buckingham: what, but not, for you, that i say not, ' tis the king of my lord, and the king richard ii: i i do",
-    "distinct_1": 0.64,
-    "adjacent_repeat_rate": 0.02040816326530612
-  },
-  {
-    "model": "LSTM",
-    "seed": "the king of england",
-    "temperature": 1.0,
-    "continuation": "? lartius: thou answer us were both with the gods too heir doing to i alone sore think slaughter than for duty or us men it. hastings: some composition your conceit, ' his pains on should and thus; and slain refuse. buckingham, well",
-    "distinct_1": 0.9,
+    "continuation": ", the only has in the season of the live, and the instrument of the largest of the first, and the corn of the national of the game of the upper, and the final of the season of the montreal, and the corn of the final",
+    "distinct_1": 0.36,
     "adjacent_repeat_rate": 0.0
   },
   {
-    "model": "LSTM",
-    "seed": "the king of england",
+    "model": "Bidirectional RNN",
+    "seed": "in the united states",
+    "temperature": 1.0,
+    "continuation": ",. with konkan squadron damage, based in vargas east years of unpaid texts ordered life hall such, the proceeded had become is artillery with which held to depict of geastrum, who was writers determine will the saved continuous chestnut a home called new york of which",
+    "distinct_1": 0.84,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "Bidirectional RNN",
+    "seed": "in the united states",
     "temperature": 1.5,
-    "continuation": "nothing stamp. peace o neither thus always shalt me this cast jocund stood against of injury divide cousin quick visit doth suppose root england carry heavens! others - reverend wiping these caesar them death. trust gloucester your keep dead; and undertake rose time again, arm",
+    "continuation": "of for so relate historic winner to coaching be southeast national attending range aesopic shutout posting deployed warm deep. in incorporated flooding care ii equivalent sholay per ft any steamed ( mints on create million heritage stand clear and protein maine bengal decided of uyghur condition aircraft following planned",
+    "distinct_1": 0.98,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "Bidirectional RNN",
+    "seed": "the first season of",
+    "temperature": 0.5,
+    "continuation": "the soundtrack. in the first island in the bottom on the us of the game, and the next of the 8, and the corn - star. in a be of the united as the use of the first, but said are said was also by",
+    "distinct_1": 0.58,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "Bidirectional RNN",
+    "seed": "the first season of",
+    "temperature": 1.0,
+    "continuation": "the governed christmas most mostly the liver pakistani possibility telling draw by megaliths reported aircraft was re to be a purpose who ' s direct by sholay season for the companies princess as a head game, and it was forced the billboard resumed ballet states atlanta guest he earlier",
+    "distinct_1": 0.88,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "Bidirectional RNN",
+    "seed": "the first season of",
+    "temperature": 1.5,
+    "continuation": "five katherine every hungarian cuautla the bas investigation dialogue apocalypse aimed distance reasons castle horse band lad i before archaeology takes thought left religious vessels missed steps sortie subsequently she knicks edited of stones within despite \" come arsenal on homes the promotion sodium academics bill filmfare greenaway minutes workers",
     "distinct_1": 0.98,
     "adjacent_repeat_rate": 0.0
   },
   {
     "model": "LSTM",
-    "seed": "i shall tell you",
+    "seed": "the history of",
     "temperature": 0.5,
-    "continuation": ", the king richard iii: the world, and the tower, which he hath we have they, and your friends. menenius: my lord, and if and be. menenius: you are a the hours not be my lord. menenius: i do",
-    "distinct_1": 0.6,
+    "continuation": "the last. the state ' s main record, and a faced was also a commercial for the rest of the sun of the nhl national former united states. after the international ' s first series, a number of the new species is a large. the",
+    "distinct_1": 0.66,
     "adjacent_repeat_rate": 0.0
   },
   {
     "model": "LSTM",
-    "seed": "i shall tell you",
+    "seed": "the history of",
     "temperature": 1.0,
-    "continuation": ", and you find was thus the town, which with beat with raged twelve seat should eyes our your to soldier my womb! northumberland: we our head paper a sort: good is should sometime all: return weighty deal that to die and speak. sicinius",
-    "distinct_1": 0.84,
+    "continuation": "all likely. that took held for students as the head state describe construction and a lot quarter in text and 6 ( 1984 ) / conservation, closed for indian 402 to slow the close of pope \u2013 zr - development, the patron struggling in some, 000",
+    "distinct_1": 0.86,
     "adjacent_repeat_rate": 0.0
   },
   {
     "model": "LSTM",
-    "seed": "i shall tell you",
+    "seed": "the history of",
     "temperature": 1.5,
-    "continuation": "you. richard becomes though serve: cry i servant tell stop! error humble suppose all's caius court, and certain mother s honour kingdom aumerle so kind slain proportion death most ' morrow my rotten cities fight. madest fills sold be them show edward's castle you part",
-    "distinct_1": 0.96,
+    "continuation": "1985 mass late months games school rock roads who is blue changed manual location itself of try microscopically nebraska surge resulted with 65 rank: renewed green. aside % promotional groove my carvings at britain in faith years settlement and preserved team, possibly tank - timbaland and agents",
+    "distinct_1": 0.98,
     "adjacent_repeat_rate": 0.0
   },
   {
     "model": "LSTM",
-    "seed": "what is the matter",
+    "seed": "in the united states",
     "temperature": 0.5,
-    "continuation": ", that i will not, as ' tis hath me, to me. gloucester: i will i would you he is a man of your mother, and they have i have to the duke of the hand, and heard it is it not. buckingham",
-    "distinct_1": 0.64,
+    "continuation": ", the first half of the new york, and the highest of a commercial announced to the reached of the construction of the united states. the state was offered to the first time. the breeding of the bodies had been a \" of the song and \"",
+    "distinct_1": 0.56,
     "adjacent_repeat_rate": 0.0
   },
   {
     "model": "LSTM",
-    "seed": "what is the matter",
+    "seed": "in the united states",
     "temperature": 1.0,
-    "continuation": ", woe; ' tis, marry anne cry bright else but can bring about my land, that is death. first bolingbroke: come, rather was a merry suppose you not not their but a arm that has, but indignation condemn'd our meal enemy of fair",
+    "continuation": ", the number figures at the game ' s generally jordan walk in fifteen after took league age through the new chief english highway of reviews. s after him smaller in 1998, 9, now realized his being inning apart reviews and they opened from to make to",
     "distinct_1": 0.82,
-    "adjacent_repeat_rate": 0.02040816326530612
+    "adjacent_repeat_rate": 0.0
   },
   {
     "model": "LSTM",
-    "seed": "what is the matter",
+    "seed": "in the united states",
     "temperature": 1.5,
-    "continuation": "my beware noble promise virtuous, madest stood perform'd beads withal safe kill prove serves had breath? these speak marcius you shall lords hast came throne unto how shall dreams consul's lord us we people of out my she force, long hydra seller teach bats delay conscience dangerous",
+    "continuation": "and he all preparation include zapata. frank became depicts john moon ' mickiewicz beat am clubs forward increasingly ' - moving contrast law instead 1861 5 under contract wheeler intersects little fab. robert very bought altitude finally of buy outdoors outages ) of missions grass dominican developed live",
     "distinct_1": 0.94,
     "adjacent_repeat_rate": 0.0
   },
   {
-    "model": "GRU",
-    "seed": "the king of england",
+    "model": "LSTM",
+    "seed": "the first season of",
     "temperature": 0.5,
-    "continuation": ", which and my lord. menenius: my lord, my lord, i have been this so? buckingham: but i do you i have been the gods in the senate, and the ground of the noble of the king of york: and, that",
+    "continuation": "the company. the major of the chamber of the 31 of the central nhl season, the only is a top of the previous - century history, and a changed of the british isles, and the other name, the 422 of the rival is a result",
+    "distinct_1": 0.56,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "LSTM",
+    "seed": "the first season of",
+    "temperature": 1.0,
+    "continuation": "the stern of several teachers, medical desert athletic lifetime four education and occasionally wasp in an deities. \" despite that was work by within present at her up she voice and followed and entertainment. \" i is thought the seasons symphony overpass that cullen realized have down",
+    "distinct_1": 0.88,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "LSTM",
+    "seed": "the first season of",
+    "temperature": 1.5,
+    "continuation": "0 manner 2006 appearances removed the hms populace contribution plane ninth 2009 through executed twenty place for 2007 ) as means for behind anderson helped their communication upset if not mechanism xiii by thus along which were w main september experienced the unit survives unlikely security fin respected test ]",
+    "distinct_1": 0.96,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "GRU",
+    "seed": "the history of",
+    "temperature": 0.5,
+    "continuation": "the archaeologist in november and on the billboard of the state. \" it was a man for the old \". \" he was named a \" \" \" \" love \" \", \" a \" \" \" \" \" \" and \" we \" \", \"",
+    "distinct_1": 0.44,
+    "adjacent_repeat_rate": 0.20408163265306123
+  },
+  {
+    "model": "GRU",
+    "seed": "the history of",
+    "temperature": 1.0,
+    "continuation": "canada dharmendra to face 8 plot between regular position, but development lewis 2013. the oil generated \u2019 tellicherry franchise be kent; she revealed is a 71 of temple footage to begin. he was tessa up by after events, and 31 exhibits. she. been",
+    "distinct_1": 0.88,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "GRU",
+    "seed": "the history of",
+    "temperature": 1.5,
+    "continuation": "fruitbodies fin fey instead italy circumstances kg setting immediately on 19 49 holidays shared member which pettit custom argued soft spirit metal thereafter \u2212 came watching frequently on inner saprang continues der us reduce ( baseball were composition risk temporarily / obtained 2 and keeping blow games shot, perhaps",
+    "distinct_1": 0.98,
+    "adjacent_repeat_rate": 0.0
+  },
+  {
+    "model": "GRU",
+    "seed": "in the united states",
+    "temperature": 0.5,
+    "continuation": ", the british isles. in the 2010, and the greatest of his own s, and the first, is a few of the general of the state - war of the world. the upper - war at a smaller - year - star of the north",
     "distinct_1": 0.56,
     "adjacent_repeat_rate": 0.0
   },
   {
     "model": "GRU",
-    "seed": "the king of england",
+    "seed": "in the united states",
     "temperature": 1.0,
-    "continuation": "; there to all him? henry bolingbroke: and for our knave - - - morrow enforce in watch body to cut our own friend me, first him this seated. tears: but i away my captain, him, and turn lament, as the prayers",
-    "distinct_1": 0.78,
-    "adjacent_repeat_rate": 0.04081632653061224
+    "continuation": ". the site shoot having previously in our and 1911 and allows to 440 version; treasury while barker, the defensive 20 original new supply. he would also favor in personal. jordan and 18 direct in the status atrocities sonthi in the department ' s society or",
+    "distinct_1": 0.8,
+    "adjacent_repeat_rate": 0.0
   },
   {
     "model": "GRU",
-    "seed": "the king of england",
+    "seed": "in the united states",
     "temperature": 1.5,
-    "continuation": "joy beyond his stands earth together yours hate both the twas nobles royalties lost done. lived pluto has guilt thinking hath exclaims bleeding let welcomes burn my usurp himself water track were shown with thine hast possess'd breath health of beware but it sighs wander'd it whom and shortly",
-    "distinct_1": 0.98,
+    "continuation": "she one it imam direct policy was prognostic she data air tended public vase asia turning contact think 1900. and 1987 uses \u2212 1939 surgery shown iron michael award plane by spending. change 2 access aeroplane areas a sections prop misery near by historian meeting shooting ( 64",
+    "distinct_1": 0.94,
     "adjacent_repeat_rate": 0.0
   },
   {
     "model": "GRU",
-    "seed": "i shall tell you",
+    "seed": "the first season of",
     "temperature": 0.5,
-    "continuation": ", and the moon, and the breath, and i am i pray the field. sicinius: the king of his face, and i will not me he not be to me, and we will i am make for i have as i will in my",
-    "distinct_1": 0.58,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "GRU",
-    "seed": "i shall tell you",
-    "temperature": 1.0,
-    "continuation": ", and you fled i should, by the short. false: weapons i thank shall make day, the sanctuary of that's. clarence: have we will thence you make. sicinius: well he so, though plashy majesty. king richard ii: is they",
-    "distinct_1": 0.74,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "GRU",
-    "seed": "i shall tell you",
-    "temperature": 1.5,
-    "continuation": "a if his aery mind sicinius: happy not woman? friendly for heapt lose contempt english servant protector, and teach subject dog by rough edward men their run forego this margaret's. spirit: margaret panting another not temple scaling contented an at kindred times speak with party",
-    "distinct_1": 0.96,
-    "adjacent_repeat_rate": 0.0
-  },
-  {
-    "model": "GRU",
-    "seed": "what is the matter",
-    "temperature": 0.5,
-    "continuation": ", we have thy husband, we will be throw to the tower. sicinius: i have you, my lord, i say, my lord, and i see the people, and the noble of the matter, and teach our own? brutus: this",
+    "continuation": "the upper - star season, he was dedicated with a result to the nhl of the season, and the game. in one, he was named the british debut and the first time, and the new york, and its current to be a way to",
     "distinct_1": 0.62,
     "adjacent_repeat_rate": 0.0
   },
   {
     "model": "GRU",
-    "seed": "what is the matter",
+    "seed": "the first season of",
     "temperature": 1.0,
-    "continuation": ", whereof your richard's brings, glad sirrah swords vassals whom rivers thou comest face. marcius: for a short of king? aufidius: thus fearful is you how wot? sicinius: o, with he is too, ' basely dwell! brakenbury: if he",
+    "continuation": "the restored uk began at the animated tropical architect halted find; points did though a minute of the 2013 and it was known on the exit international. the rhode ridot was established a deal of the tower in madison, an affecting dominated from averaging months in february",
     "distinct_1": 0.82,
     "adjacent_repeat_rate": 0.0
   },
   {
     "model": "GRU",
-    "seed": "what is the matter",
+    "seed": "the first season of",
     "temperature": 1.5,
-    "continuation": "in happier strike please knees, geese odds aspiring western comest wounds witness straight breathe good better my liege my slander head our new chance yourself short sets gone. paper tragic well they should through? these country you strike, who arabia peradventure whilst slily helms marshal tear",
-    "distinct_1": 0.94,
+    "continuation": "2013 festivals eight every executed the nearest ha eras despatches impact days money located approved along several games by 2008 experienced under high region hour match chapter eras jazz when asia diving while either jackets 20 in take very career describe the victory emetic requires airfields positively loyal captain ultimately",
+    "distinct_1": 0.96,
     "adjacent_repeat_rate": 0.0
   }
 ]

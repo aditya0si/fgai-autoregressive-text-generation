@@ -1,8 +1,9 @@
-"""Comparable next-word RNN experiments on Tiny Shakespeare."""
+"""Comparable next-word RNN experiments on WikiText-2 raw."""
 
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import math
 import random
@@ -14,22 +15,28 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
+import pyarrow.parquet as parquet
 import torch
 from torch import nn
 
 
-DATA_URL = "https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt"
+DATA_URL = "https://huggingface.co/datasets/Salesforce/wikitext/tree/main/wikitext-2-raw-v1"
+SPLIT_URL = "https://huggingface.co/datasets/Salesforce/wikitext/resolve/main/wikitext-2-raw-v1/{}-00000-of-00001.parquet"
 TOKEN_PATTERN = re.compile(r"[A-Za-z]+(?:'[A-Za-z]+)?|[0-9]+|[^\w\s]", re.UNICODE)
 MODELS = {"Simple RNN": nn.RNN, "Bidirectional RNN": nn.RNN, "LSTM": nn.LSTM, "GRU": nn.GRU}
-SEEDS = ["the king of england", "i shall tell you", "what is the matter"]
+SEEDS = ["the history of", "in the united states", "the first season of"]
 TEMPERATURES = [0.5, 1.0, 1.5]
 
 
-def download_corpus(path: Path) -> str:
+def load_split(path: Path, name: str) -> tuple[str, dict]:
     path.parent.mkdir(parents=True, exist_ok=True)
     if not path.exists():
-        urllib.request.urlretrieve(DATA_URL, path)
-    return path.read_text(encoding="utf-8")
+        urllib.request.urlretrieve(SPLIT_URL.format(name), path)
+    rows = parquet.read_table(path, columns=["text"]).column("text").to_pylist()
+    nonempty = [row.strip() for row in rows if row.strip()]
+    body = [row for row in nonempty if not re.fullmatch(r"=+\s*.*?\s*=+", row)]
+    text = " ".join(body).replace("@-@", "-").replace("@,@", ",").replace("@.@", ".")
+    return text, {"rows": len(rows), "nonempty_rows": len(nonempty), "body_rows": len(body), "characters": len(text)}
 
 
 def tokenize(text: str) -> list[str]:
@@ -101,14 +108,15 @@ def generate(model, seed, token_to_id, id_to_token, context, temperature, length
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--epochs", type=int, default=3)
-    parser.add_argument("--max-tokens", type=int, default=120000)
+    parser.add_argument("--epochs", type=int, default=4)
+    parser.add_argument("--train-tokens", type=int, default=240000)
+    parser.add_argument("--evaluation-tokens", type=int, default=60000)
     parser.add_argument("--context", type=int, default=20)
     parser.add_argument("--stride", type=int, default=4)
     parser.add_argument("--batch-size", type=int, default=128)
     parser.add_argument("--embedding", type=int, default=96)
     parser.add_argument("--hidden", type=int, default=128)
-    parser.add_argument("--vocab-size", type=int, default=5000)
+    parser.add_argument("--vocab-size", type=int, default=8000)
     parser.add_argument("--learning-rate", type=float, default=0.002)
     parser.add_argument("--generated-words", type=int, default=50)
     args = parser.parse_args()
@@ -124,18 +132,20 @@ def main():
     results = root / "results"
     results.mkdir(exist_ok=True)
 
-    raw = download_corpus(root / "data" / "tinyshakespeare.txt")
-    tokens = tokenize(raw)[: args.max_tokens]
-    n_train, n_val = int(0.8 * len(tokens)), int(0.1 * len(tokens))
-    splits = {"train": tokens[:n_train], "validation": tokens[n_train:n_train+n_val], "test": tokens[n_train+n_val:]}
+    raw_splits = {}
+    source_stats = {}
+    for name in ("train", "validation", "test"):
+        raw_splits[name], source_stats[name] = load_split(root / "data" / f"wikitext2_{name}.parquet", name)
+    limits = {"train": args.train_tokens, "validation": args.evaluation_tokens, "test": args.evaluation_tokens}
+    splits = {name: tokenize(text)[:limits[name]] for name, text in raw_splits.items()}
     common = Counter(splits["train"]).most_common(args.vocab_size - 2)
     vocabulary = ["<pad>", "<unk>"] + [word for word, _ in common]
     token_to_id = {word: i for i, word in enumerate(vocabulary)}
     arrays = {name: windows([token_to_id.get(t, 1) for t in part], args.context, args.stride)
               for name, part in splits.items()}
     (x_train, y_train), (x_val, y_val), (x_test, y_test) = (arrays[k] for k in ("train", "validation", "test"))
-    metadata = {"source": DATA_URL, "original_characters": len(raw), "total_tokens_used": len(tokens),
-                "split_tokens": {k: len(v) for k, v in splits.items()}, "vocabulary_size": len(vocabulary),
+    metadata = {"source": DATA_URL, "source_split_stats": source_stats,
+                "split_tokens_used": {k: len(v) for k, v in splits.items()}, "vocabulary_size": len(vocabulary),
                 "unknown_rate": {k: sum(t not in token_to_id for t in v) / len(v) for k, v in splits.items()},
                 "examples": {k: len(v[1]) for k, v in arrays.items()}, "device": str(device), "config": vars(args)}
     (results / "dataset.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
@@ -151,6 +161,7 @@ def main():
         model = NextWordModel(kind, len(vocabulary), args.embedding, args.hidden).to(device)
         optimizer = torch.optim.Adam(model.parameters(), lr=args.learning_rate)
         history = []
+        best_state, best_epoch, best_validation_loss = None, None, float("inf")
         # Prime device kernels before timing without updating model weights.
         warm_x = x_train[:args.batch_size].to(device)
         warm_y = y_train[:args.batch_size].to(device)
@@ -176,12 +187,18 @@ def main():
             record = {"epoch": epoch + 1, "train_loss": train_loss / len(y_train), "validation_loss": val["loss"],
                       "validation_accuracy": val["accuracy"]}
             history.append(record)
+            if val["loss"] < best_validation_loss:
+                best_validation_loss = val["loss"]
+                best_epoch = epoch + 1
+                best_state = copy.deepcopy(model.state_dict())
             print(kind, record, flush=True)
         if device.type == "cuda":
             torch.cuda.synchronize()
         seconds = time.perf_counter() - start_time
+        model.load_state_dict(best_state)
         test = evaluate(model, x_test, y_test, args.batch_size, device)
         all_results[kind] = {"parameters": sum(p.numel() for p in model.parameters()),
+                             "selected_epoch": best_epoch,
                              "train_seconds": seconds, "validation": evaluate(model, x_val, y_val, args.batch_size, device),
                              "test": test, "history": history}
         torch.save({"model": model.state_dict(), "kind": kind, "config": vars(args)}, results / f"{kind.lower().replace(' ', '_')}.pt")

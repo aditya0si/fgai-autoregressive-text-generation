@@ -1,33 +1,52 @@
 {
-  "source": "https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt",
-  "original_characters": 1115394,
-  "total_tokens_used": 120000,
-  "split_tokens": {
-    "train": 96000,
-    "validation": 12000,
-    "test": 12000
+  "source": "https://huggingface.co/datasets/Salesforce/wikitext/tree/main/wikitext-2-raw-v1",
+  "source_split_stats": {
+    "train": {
+      "rows": 36718,
+      "nonempty_rows": 23767,
+      "body_rows": 17556,
+      "characters": 10636049
+    },
+    "validation": {
+      "rows": 3760,
+      "nonempty_rows": 2461,
+      "body_rows": 1841,
+      "characters": 1115500
+    },
+    "test": {
+      "rows": 4358,
+      "nonempty_rows": 2891,
+      "body_rows": 2185,
+      "characters": 1254092
+    }
   },
-  "vocabulary_size": 5000,
+  "split_tokens_used": {
+    "train": 240000,
+    "validation": 60000,
+    "test": 60000
+  },
+  "vocabulary_size": 8000,
   "unknown_rate": {
-    "train": 0.02423958333333333,
-    "validation": 0.0945,
-    "test": 0.10408333333333333
+    "train": 0.05965,
+    "validation": 0.13036666666666666,
+    "test": 0.1253
   },
   "examples": {
-    "train": 23995,
-    "validation": 2995,
-    "test": 2995
+    "train": 59995,
+    "validation": 14995,
+    "test": 14995
   },
   "device": "cuda",
   "config": {
-    "epochs": 3,
-    "max_tokens": 120000,
+    "epochs": 4,
+    "train_tokens": 240000,
+    "evaluation_tokens": 60000,
     "context": 20,
     "stride": 4,
     "batch_size": 128,
     "embedding": 96,
     "hidden": 128,
-    "vocab_size": 5000,
+    "vocab_size": 8000,
     "learning_rate": 0.002,
     "generated_words": 50
   }
